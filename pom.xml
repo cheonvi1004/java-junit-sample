@@ -25,10 +25,10 @@
 
     <repositories>
     <repository>
-        <id>public</id> //FORMAT
+        <id>public</id>
         <name>maven central mirror Repository</name>
         <layout>default</layout>
-        <url>http://183.111.127.218:8081/repository/maven-public/</url> //FORMAT
+        <url>http://183.111.127.218:8081/repository/maven-public/</url>
         <snapshots>
             <enabled>false</enabled>
         </snapshots>
