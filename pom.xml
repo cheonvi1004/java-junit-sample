@@ -24,17 +24,31 @@
     </properties>
 
     <repositories>
-     <repository>
-         <id>public</id>
-         <url>http://183.111.127.218:8081/repository/maven-public/</url>
-         <releases>
-             <enabled>true</enabled>
-         </releases>
-         <snapshots>
-             <enabled>true</enabled>
-         </snapshots>
-     </repository>
-   </repositories>
+    <repository>
+        <id>public</id> //FORMAT
+        <name>maven central mirror Repository</name>
+        <layout>default</layout>
+        <url>http://183.111.127.218:8081/repository/maven-public/</url> //FORMAT
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+<pluginRepositories>
+    <pluginRepository>
+        <!-- id 는 central 이어야 함 -->
+        <id>central</id>
+        <name>Maven Plugin Repository</name>
+        <url>http://183.111.127.218:8081/repository/maven-central/</url>
+        <layout>default</layout>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+        <releases>
+            <updatePolicy>never</updatePolicy>
+        </releases>
+    </pluginRepository>
+</pluginRepositories>
      
     <dependencies>
         <dependency>
@@ -84,19 +98,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-        </plugins>
-         <pluginRepositories>
-               <pluginRepository>
-                   <id>central</id>
-                  <url>http://183.111.127.218:8081/repository/maven-public/</url>
-                  <releases>
-                      <enabled>true</enabled>
-                  </releases>
-                  <snapshots>
-                      <enabled>true</enabled>
-                  </snapshots>
-               </pluginRepository>
-         </pluginRepositories>
+        </plugins>         
     </build>
 
 </project>
