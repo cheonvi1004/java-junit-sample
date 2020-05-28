@@ -85,6 +85,18 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+         <pluginRepositories>
+               <pluginRepository>
+                   <id>central</id>
+                  <url>http://183.111.127.218:8081/repository/maven-public/</url>
+                  <releases>
+                      <enabled>true</enabled>
+                  </releases>
+                  <snapshots>
+                      <enabled>true</enabled>
+                  </snapshots>
+               </pluginRepository>
+         </pluginRepositories>
     </build>
 
 </project>
